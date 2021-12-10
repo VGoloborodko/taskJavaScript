@@ -473,3 +473,65 @@
 //   }
   
 //   kebabToCamel('first-user');
+
+//_____________________________________________________________________________________
+
+// const user = {
+//     name: 'Vitaly',
+//     gender: 'M',
+//     'birthday br': '09.07.1997'
+// }
+
+// console.log(user['birthday br']);
+
+// const user = {
+//     name: 'Vitaly',
+//     gender: 'Male'
+// };
+
+// const newUser = {
+//     ...user,
+//     adres: 'Russia'
+// };
+
+// // console.log(user);
+// // console.log(newUser);
+
+// if (user.status) {
+//     console.log('первое условие');
+// } else {
+//     console.log('такого свойства нет');
+// }
+
+//_____________________________________________________________________________________
+
+//Упражнение
+
+const text = prompt('введите ключ'); //name
+
+const user = {
+    name: 'Vitaly',
+    age: '24',
+    premium: true,
+    server: 2
+}
+
+if (user[text]) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+
+
+// function br(arr) {
+//     let newArr = arr.filter(item => {
+//         if (item > 10 && item < 66) {
+//             return item;
+//         } else {
+//             return false;
+//         }
+//     })
+//     console.log(newArr);
+// }
+
+// console.log(br([1,3,65,8,44,82,5,44,0]));
