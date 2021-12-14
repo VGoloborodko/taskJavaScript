@@ -507,31 +507,4 @@
 
 //Упражнение
 
-const text = prompt('введите ключ'); //name
-
-const user = {
-    name: 'Vitaly',
-    age: '24',
-    premium: true,
-    server: 2
-}
-
-if (user[text]) {
-    console.log(true);
-} else {
-    console.log(false);
-}
-
-
-// function br(arr) {
-//     let newArr = arr.filter(item => {
-//         if (item > 10 && item < 66) {
-//             return item;
-//         } else {
-//             return false;
-//         }
-//     })
-//     console.log(newArr);
-// }
-
-// console.log(br([1,3,65,8,44,82,5,44,0]));
+console.log('ff')
