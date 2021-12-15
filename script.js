@@ -505,6 +505,71 @@
 
 //_____________________________________________________________________________________
 
-//Упражнение
+// const inq = prompt('Введите имя свойства');
 
-console.log('ff')
+//Обычный объект
+const user = {
+    name: 'Luser',
+    nickName: 'Loshara',
+    age: 24,
+    beforePension: null,
+    premium: true,
+    'h and h': null,
+    setAge(newAge) {
+        this.age = newAge;
+    },
+    getYearsBeforeRetirement(pension) {
+        this.beforePension = pension - this.age;
+    }
+}
+
+//Деструктуризация объекта, для записи свойств в отдельные переменные
+const {name, age} = user;
+console.log(name , age);
+
+//копирование объекта с помощью spreed оператора
+const userClone = {...user};
+console.log(userClone);
+
+// //Добавление свойства
+// user.status = 'online';
+// //Изменение свойства
+// user.status = 'offline';
+// //Удаление свойства
+// delete user.status;
+
+// user.setAge(34)
+// user.getYearsBeforeRetirement(65)
+
+// console.log(user);
+// console.log(`До пенсии осталось ${user.beforePension}`);
+
+// //Создали ссылку к свойству объекта
+// const property = 'premium';
+
+// //Обращение к свойствам
+// console.log(user.name);
+// console.log(user['premium']);
+// console.log(user['h and h']);
+// //Ссылка через переменную
+// console.log(`Ссылка к свойству premium: ${user[property]}`);
+
+// //Наличие свойства
+// if (user.name) {
+//     console.log(`Свойство name true`);
+// } else {
+//     console.log(`Свойство name false`);
+// }
+
+// //Наличие свойства
+// if ('premium' in user) {
+//     console.log(`Свойство premium true`);
+// } else {
+//     console.log(`Свойство premium false`);
+// }
+
+// if (user[inq]) {
+//     console.log(`Свойство ${inq} имеется`);
+// } else {
+//     console.log(`Свойство ${inq} не имеется`);
+// }
