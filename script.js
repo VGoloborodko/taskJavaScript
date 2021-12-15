@@ -507,29 +507,29 @@
 
 // const inq = prompt('Введите имя свойства');
 
-//Обычный объект
-const user = {
-    name: 'Luser',
-    nickName: 'Loshara',
-    age: 24,
-    beforePension: null,
-    premium: true,
-    'h and h': null,
-    setAge(newAge) {
-        this.age = newAge;
-    },
-    getYearsBeforeRetirement(pension) {
-        this.beforePension = pension - this.age;
-    }
-}
+// //Обычный объект
+// const user = {
+//     name: 'Luser',
+//     nickName: 'Loshara',
+//     age: 24,
+//     beforePension: null,
+//     premium: true,
+//     'h and h': null,
+//     setAge(newAge) {
+//         this.age = newAge;
+//     },
+//     getYearsBeforeRetirement(pension) {
+//         this.beforePension = pension - this.age;
+//     }
+// }
 
-//Деструктуризация объекта, для записи свойств в отдельные переменные
-const {name, age} = user;
-console.log(name , age);
+// //Деструктуризация объекта, для записи свойств в отдельные переменные
+// const {name, age} = user;
+// console.log(name , age);
 
-//копирование объекта с помощью spreed оператора
-const userClone = {...user};
-console.log(userClone);
+// //копирование объекта с помощью spreed оператора
+// const userClone = {...user};
+// console.log(userClone);
 
 // //Добавление свойства
 // user.status = 'online';
@@ -573,3 +573,63 @@ console.log(userClone);
 // } else {
 //     console.log(`Свойство ${inq} не имеется`);
 // }
+
+//_____________________________________________________________________________________
+
+// // Объекты
+
+// const userOne = {
+//     name: 'Vladislav',
+//     age: 24,
+//     loginfo(job, phone) {
+//         console.group(`${this.name} info:`)
+//         console.log(`Name is ${this.name}`);
+//         console.log(`Age is ${this.age}`);
+//         console.log(`Job is ${job}`);
+//         console.log(`Job is ${phone}`);
+//         console.groupEnd()
+//     }
+// }
+
+// const userTwo = {
+//     name: 'Elena',
+//     age: 33
+// }
+
+// userOne.loginfo()
+
+// //Метод bind
+// //Первый способ
+// userOne.loginfo.bind(userTwo)('Frontend', '+7 977 147 47 14')
+// //Или
+// userOne.loginfo.bind(userTwo, 'Frontend', '+7 977 147 47 14')()
+// //Второй способ
+// const fnAddInfo = userOne.loginfo.bind(userTwo)
+// fnAddInfo('Frontend', '+7 977 147 47 14')
+
+// //Метод call
+// userOne.loginfo.call(userTwo, 'Frontend', '+7 977 147 47 14')
+
+// //Метод apply
+// userOne.loginfo.apply(userTwo, ['Frontend', '+7 977 147 47 14'])
+
+// const array = [1, 2, 3, 4, 5];
+
+// Array.prototype.multiplay = ( function(n) {
+//     return this.map( i => {
+//         return i * n
+//     })
+// })
+
+// console.log(array.multiplay(2));
+
+// function multiply(arr, n) {
+//     return arr.map( element => {
+//         return element * n;
+//     })
+// }
+
+// console.log(multiply(array, 5));
+// console.log(array);
+
+//_____________________________________________________________________________________
