@@ -633,3 +633,169 @@
 // console.log(array);
 
 //_____________________________________________________________________________________
+
+// const shopItem  = {
+//     name: 'phone',
+//     price: 12000,
+//     changeName(newName) {
+//         this.name = newName;
+//         console.log(this.name)
+//     },
+//     changePrice(newPrice) {
+//         this.price = newPrice;
+//         console.log(this.price);
+//     }
+// }
+
+// shopItem.changeName('iphone')
+// shopItem.changeName(35000)
+
+//Классы
+
+// class User {
+//     constructor(name) {
+//         this.name = name;
+//         this.department = 'Rebels';
+//         this.isAvailable = false;
+//     }
+//     toggleAvailable(isAv) {
+//         this.isAvailable = isAv;
+//     }
+// }
+
+// const userOne = new User('Luke Skywalker');
+// const userTwo = new User('Han Solo');
+
+// console.log(userOne);
+// console.log(userTwo);
+
+// class Person {
+//     constructor(surname, name, age, gender) {
+//         this.surname = surname;
+//         this.name = name;
+//         this.age = age;
+//         this.gender = gender;
+//     }
+//     celebrateBirthday() {
+//         this.age += 1
+//     }
+//     rename(newName) {
+//         this.name = newName;
+//     }
+// }
+
+// const personOne = new Person('Buchkova', 'Anna', 19, 'female');
+// const personTwo = new Person('Volkova', 'Olga', 22, 'female');
+// const personThree = new Person('Dyatlova', 'Nadya', 30, 'female');
+
+// personOne.celebrateBirthday()
+// personTwo.celebrateBirthday()
+// personThree.celebrateBirthday()
+
+// console.log(personOne);
+// console.log(personTwo);
+// console.log(personThree);
+
+// class Admin extends Person {
+//     constructor(surname, name, age, gender, role, id) {
+//         super(surname, name, age, gender);
+//         this.role = role;
+//         this.id = id;
+//     }
+// }
+
+// class Player extends Person {
+//     constructor(surname, name, age, gender, level) {
+//         super(surname, name, age, gender);
+//         this.level = level;
+//     }
+// }
+
+// const personFour = new Admin('Golob', 'Vitaly', 25, 'Male', 'admin', 001);
+// const personFive = new Player('Golob', 'Aleksey', 15, 'Male', 14);
+
+// personFive.rename('Maksim')
+
+// console.log(personFour);
+// console.log(personFive);
+
+// const animal = {
+//     name: 'Animal',
+//     age: 5,
+//     hasTail: true
+// }
+
+class Animal {
+    static type = 'ANIMAL'
+
+    constructor(options) {
+        this.name = options.name;
+        this.age = options.age;
+        this.hasTail = options.hasTail;
+    }
+    voice() {
+        console.log('Ааааууууу');
+    }
+}
+
+// const obj = new Animal({
+//     name: 'Animal',
+//     age: 5,
+//     hasTail: true
+// })
+
+// class Cat extends Animal {
+//     static type = 'CAT'
+
+//     constructor(options) {
+//         super(options)
+//         this.color = options.color;
+//     }
+
+//     voice() {
+//         super.voice()
+//         console.log('I am cat');
+//     }
+
+//     get ageInfo() {
+//         return this.age * 7;
+//     }
+
+//     set ageInfo(newAge) {
+//         this.age = newAge;
+//     }
+// }
+
+// const cat = new Cat ({
+//     name: 'Cat',
+//     age: 7,
+//     hasTail: true
+// })
+
+class Component {
+    constructor(selector) {
+        this.$el = document.querySelector(selector)
+    }
+
+    hide() {
+        this.$el.style.display = 'none';
+    }
+
+    show() {
+        this.$el.style.display = 'block';
+    }
+}
+
+class Box extends Component {
+    constructor(options) {
+        super(options.selector)
+        this.$el.style.width = this.$el.style.height = options.size + 'px'
+        this.$el.style.background = options.color
+    }
+}
+
+const boxOne = new Box({
+    selector: '#boxOne',
+    size: 100,
+    color: 'red'
+})
