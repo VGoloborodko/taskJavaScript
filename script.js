@@ -725,18 +725,18 @@
 //     hasTail: true
 // }
 
-class Animal {
-    static type = 'ANIMAL'
+// class Animal {
+//     static type = 'ANIMAL'
 
-    constructor(options) {
-        this.name = options.name;
-        this.age = options.age;
-        this.hasTail = options.hasTail;
-    }
-    voice() {
-        console.log('Ааааууууу');
-    }
-}
+//     constructor(options) {
+//         this.name = options.name;
+//         this.age = options.age;
+//         this.hasTail = options.hasTail;
+//     }
+//     voice() {
+//         console.log('Ааааууууу');
+//     }
+// }
 
 // const obj = new Animal({
 //     name: 'Animal',
@@ -772,30 +772,95 @@ class Animal {
 //     hasTail: true
 // })
 
-class Component {
-    constructor(selector) {
-        this.$el = document.querySelector(selector)
-    }
+// class Component {
+//     constructor(selector) {
+//         this.$el = document.querySelector(selector)
+//     }
 
-    hide() {
-        this.$el.style.display = 'none';
-    }
+//     hide() {
+//         this.$el.style.display = 'none';
+//     }
 
-    show() {
-        this.$el.style.display = 'block';
-    }
-}
+//     show() {
+//         this.$el.style.display = 'block';
+//     }
+// }
 
-class Box extends Component {
-    constructor(options) {
-        super(options.selector)
-        this.$el.style.width = this.$el.style.height = options.size + 'px'
-        this.$el.style.background = options.color
-    }
-}
+// class Box extends Component {
+//     constructor(options) {
+//         super(options.selector)
+//         this.$el.style.width = this.$el.style.height = options.size + 'px'
+//         this.$el.style.background = options.color
+//     }
+// }
 
-const boxOne = new Box({
-    selector: '#boxOne',
-    size: 100,
-    color: 'red'
-})
+// const boxOne = new Box({
+//     selector: '#boxOne',
+//     size: 100,
+//     color: 'red'
+// })
+
+//_____________________________________________________________________________________
+
+// //DOM дерево
+
+// //Метод querySelector() - метод вернёт первый объект, подходящий под селектор, переданный в качестве параметра
+// const input = document.querySelector('input');
+
+// //Метод querySelectorAll() - этот метод возращает коллекцию элементов. Коллекция - это упорядоченный псевдомассив элементов
+// //Обратиться к элементу можно как к массиву и перебрать тоже
+// const input = document.querySelectorAll('input');
+
+// //Упражнение
+// const videoCards = document.querySelectorAll('.primary');
+// console.log(videoCards[0].innerText);
+// console.log(videoCards[1].innerText);
+
+// const videoCards = document.querySelector('ul');
+
+// console.log(videoCards.parentElement);
+// console.log(`Предыдущий ${videoCards.previousElementSibling.innerHTML}`);
+// console.log(videoCards.innerText);
+// console.log(videoCards.firstElementChild.innerHTML);
+
+// // const video = document.querySelectorAll('li');
+// // video.forEach(element => {
+// //     console.log(element.innerHTML);
+// // })
+
+// const change = document.querySelector('.primary');
+// console.log(change.innerText);
+// change.innerText = 'Я поменял текст';
+// change.style.color = 'red';
+// console.log(change.innerText);
+
+// const header = document.querySelector('h1');
+// header.innerText = 'GeForce 20 Series';
+
+// const changeBackground = document.querySelectorAll('.primary');
+// changeBackground.forEach( e => {
+//     e.style.background = '#ebebeb';
+// })
+
+// const list = document.querySelectorAll('li');
+
+// list.forEach(element => {
+//     element.classList.add('item');
+// })
+
+// list.forEach(element => {
+//     if (!element.classList.contains('primary')) {
+//         element.classList.add('secondary');
+//     }
+// })
+
+// list.forEach(element => {
+//     if (element.classList.contains('primary')) {
+//         element.remove();
+//     }
+// })
+
+// const parrent = document.querySelector('ul');
+// const newElement = document.createElement('li');
+// newElement.innerText = 'TITAN RTX';
+// parrent.insertBefore(newElement, list[0]);
