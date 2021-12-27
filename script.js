@@ -864,3 +864,69 @@
 // const newElement = document.createElement('li');
 // newElement.innerText = 'TITAN RTX';
 // parrent.insertBefore(newElement, list[0]);
+
+//_____________________________________________________________________________________
+
+//Упражнение
+
+// const btn = document.querySelectorAll('.shopping-list button');
+// btn.forEach(element => {
+//     element.addEventListener('click', event => {
+//         event.target.style.textDecoration = 'line-through';
+//     });
+// })
+
+//_____________________________________________________________________________________
+
+//Упражнение
+
+// const zone = document.querySelector('.zone');
+// const label = document.querySelector('.label');
+
+// zone.addEventListener('mouseover', () => {
+//   label.style.display = 'block';
+// });
+
+// zone.addEventListener('mouseout', () => {
+//   label.style.display = 'none';
+// });
+
+//_____________________________________________________________________________________
+
+// document.addEventListener('keyup', event => {
+//     if (event.keyCode == 13) {
+//         console.log(`ENTER`);
+//     } else {
+//         console.log(event.keyCode);
+//     }
+// })
+
+//_____________________________________________________________________________________
+
+// const input = document.querySelector('.form input');
+// const button = document.querySelector('.btn');
+
+// const arr = [];
+
+// button.addEventListener('click', () => {
+//     console.log(input.value);
+//     const name = input.value;
+//     arr.push(name);
+
+//     console.log(arr);
+
+//     input.value = '';
+// })
+
+//_____________________________________________________________________________________
+
+// const password = document.querySelector('.pass');
+// const clue = document.querySelector('.tip');
+
+// password.addEventListener('blur', () => {
+//     if (password.value.length >= 3) {
+//         clue.style.display = 'none';
+//     } else {
+//         clue.style.display = 'block';
+//     }
+// })

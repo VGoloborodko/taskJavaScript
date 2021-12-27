@@ -1,0 +1,31 @@
+.shopping-list button {
+    border: none;
+    background: none;
+  }
+
+.changeText {
+    color: rgb(136, 136, 136);
+}
+
+.zone {
+  width: 300px;
+  padding: 50px;
+  background-color: #ebebeb;
+}
+.label {
+  display: none;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+form {
+  margin-top: 50px;
+}
+
+.tip {
+  display: none;
+}
