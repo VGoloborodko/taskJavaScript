@@ -930,3 +930,55 @@
 //         clue.style.display = 'block';
 //     }
 // })
+
+//_____________________________________________________________________________________
+
+// const data = '{"id":371,"type":"general","joke":"Why does a chicken coop only have two doors? Because if it had four doors it would be a chicken sedan."}';
+
+// const dataObj = JSON.parse(data);
+
+// console.log(dataObj);
+
+// dataObj.id = 157;
+
+// const dataStr = JSON.stringify(dataObj)
+
+// console.log(dataStr);
+
+//_____________________________________________________________________________________
+
+//Упражнение "генератор шуток"
+
+// const text = document.querySelector('.task p');
+// const button = document.querySelector('button');
+
+// button.addEventListener('click', () => {
+//     button.innerText = 'ЕЩЕ';
+
+//     fetch('https://api.chucknorris.io/jokes/random')
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//             text.innerText = data.value;
+//         })
+//         .catch(error => {
+//             console.log(`Ошибка ${error.message}`);
+//         });
+// })
+
+//_____________________________________________________________________________________
+
+const text = document.querySelector('.task p');
+const button = document.querySelector('button');
+
+
+button.addEventListener('click', () => {
+    button.innerText = 'ЕЩЕ';
+
+    let time = 0;
+    const id = setInterval(() => {
+        time += 1;
+        // console.log(`Прошло ${time} сек.`);
+        text.innerText = time;
+    }, 1000);
+})
